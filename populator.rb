@@ -10,7 +10,7 @@ class Populator < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-darwin-amd64"
-      sha256 "fe18cd919bd48a4668b71fd98766639838ea24bebb9b050c9365e0d92e66d3e6"
+      sha256 "f485478ed6728f207bcaf7ba4c56af2f420a0f780d8412b6371bdd21537e464a"
 
       def install
         bin.install "populator-darwin-amd64" => "populator-darwin-amd64"
@@ -18,7 +18,7 @@ class Populator < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-darwin-arm64"
-      sha256 "d171f8cdada061d87472eaea326253f7f80a50b97b1bda718475188b3b04743c"
+      sha256 "13725f7f9b1e3d9f4ffd91234833c96f0545b5ec8a5a48441db69c60f0eae605"
 
       def install
         bin.install "populator-darwin-arm64" => "populator-darwin-arm64"
@@ -27,20 +27,20 @@ class Populator < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-linux-amd64"
-      sha256 "3eaa118610605b5e4590e2d57f9521ea030ce635a342bd3d97fa382559d70727"
-
-      def install
-        bin.install "populator-linux-amd64" => "populator-linux-amd64"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-linux-arm64"
-      sha256 "547ff2133de752af3e8b444304eafd039dd4c7a5e346d54806f5174f9cdba9d0"
+      sha256 "93d5073685fb612d7d079511c5f9b43cfa05af707a752e7a5fadc320a4b8d292"
 
       def install
         bin.install "populator-linux-arm64" => "populator-linux-arm64"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-linux-amd64"
+      sha256 "b8c8e00ad33d4ab1bb561505d6e4521177cd01c7b22a731e5f7e7dd0baa14001"
+
+      def install
+        bin.install "populator-linux-amd64" => "populator-linux-amd64"
       end
     end
   end
