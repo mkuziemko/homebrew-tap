@@ -9,38 +9,38 @@ class Populator < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-darwin-amd64"
-      sha256 "f485478ed6728f207bcaf7ba4c56af2f420a0f780d8412b6371bdd21537e464a"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-darwin-amd64_0.5.1_darwin_amd64"
+      sha256 "a8d6e2cfcd722c68e3f89e343bbc8f68682fe6e8108522440db93d496d6290ad"
 
       def install
-        bin.install "populator-darwin-amd64" => "populator-darwin-amd64"
+        bin.install "populator-darwin-amd64_0.5.1_darwin_amd64" => "populator-darwin-amd64"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-darwin-arm64"
-      sha256 "13725f7f9b1e3d9f4ffd91234833c96f0545b5ec8a5a48441db69c60f0eae605"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-darwin-arm64_0.5.1_darwin_arm64"
+      sha256 "0624d63bfc9ae401fe834b879de93f33a7dd4902278f269608046abaa57cec64"
 
       def install
-        bin.install "populator-darwin-arm64" => "populator-darwin-arm64"
+        bin.install "populator-darwin-arm64_0.5.1_darwin_arm64" => "populator-darwin-arm64"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-linux-arm64"
-      sha256 "93d5073685fb612d7d079511c5f9b43cfa05af707a752e7a5fadc320a4b8d292"
+    if Hardware::CPU.intel?
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-linux-amd64_0.5.1_linux_amd64"
+      sha256 "1ffe8d6dc04ae034e0ae428e11afc020f11a36c34a6b5e461fa941b3afaaac8b"
 
       def install
-        bin.install "populator-linux-arm64" => "populator-linux-arm64"
+        bin.install "populator-linux-amd64_0.5.1_linux_amd64" => "populator-linux-amd64"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-linux-amd64"
-      sha256 "b8c8e00ad33d4ab1bb561505d6e4521177cd01c7b22a731e5f7e7dd0baa14001"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/populator-linux-arm64_0.5.1_linux_arm64"
+      sha256 "18a69b542c159edc089adac60567da606305f223317fdbf7dfc0c03004bd0ce8"
 
       def install
-        bin.install "populator-linux-amd64" => "populator-linux-amd64"
+        bin.install "populator-linux-arm64_0.5.1_linux_arm64" => "populator-linux-arm64"
       end
     end
   end
