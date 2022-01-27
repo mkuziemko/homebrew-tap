@@ -5,42 +5,42 @@
 class Capact < Formula
   desc ""
   homepage "https://github.com/mkuziemko/homebrew-tap"
-  version "0.5.7"
+  version "0.5.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.7/capact_0.5.7_Darwin_x86_64"
-      sha256 "463dcfd53197f039f92d4765f400a230bd79c3fa0dcc106ecb9ea4d61d9a5e3a"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.8/capact_0.5.8_darwin_amd64"
+      sha256 "b8665f604edb1fc185029599a38d5d6593b55bc1f4b9fe331b77f66bd7c04751"
 
       def install
-        bin.install "capact_0.5.7_Darwin_x86_64" => "capact"
+        bin.install "capact_0.5.8_darwin_amd64" => "capact"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.7/capact_0.5.7_Darwin_arm64"
-      sha256 "19f691431116cc65d5dfc3d2ca3a8688b5e914e2e523c329708ca434ea7d7b6d"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.8/capact_0.5.8_darwin_arm64"
+      sha256 "94a309c1182107d7bf19dde6bd121e45f3a6b0334b397ec30d39a690d165c6d5"
 
       def install
-        bin.install "capact_0.5.7_Darwin_arm64" => "capact"
+        bin.install "capact_0.5.8_darwin_arm64" => "capact"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.7/capact_0.5.7_Linux_x86_64"
-      sha256 "a81d68bd3a9ed6a101d26359a9db4f7047fbb05f330861c115cb25d5672377da"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.8/capact_0.5.8_linux_amd64"
+      sha256 "4f20b9c14d45b682f4f73c55fb3a9859a151b4576d279a035da157e86ab56f26"
 
       def install
-        bin.install "capact_0.5.7_Linux_x86_64" => "capact"
+        bin.install "capact_0.5.8_linux_amd64" => "capact"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.7/capact_0.5.7_Linux_arm64"
-      sha256 "930d3021807ac9353e0c3587f3b1d9dcb74461c383337d65d26fe3a1cea4131e"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.8/capact_0.5.8_linux_arm64"
+      sha256 "cb6bc3b5ee2026e5b3ad39145dd21cb369490e3ce9d43590b785b5a2dd48bf37"
 
       def install
-        bin.install "capact_0.5.7_Linux_arm64" => "capact"
+        bin.install "capact_0.5.8_linux_arm64" => "capact"
       end
     end
   end
