@@ -9,38 +9,22 @@ class Capact < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/capact_0.5.1_Darwin_x86_64.tar.gz"
-      sha256 "990bc8450afab2ed441579e3950074645b35232b3e405f78d35ec9c9651942d2"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/capact-darwin-amd64"
+      sha256 "4d1fba48c5b195c9e77c812bb4e8901eb5c15c5f136a96c772ce18162cfe602b"
 
       def install
-        bin.install "capact"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/capact_0.5.1_Darwin_arm64.tar.gz"
-      sha256 "990bc8450afab2ed441579e3950074645b35232b3e405f78d35ec9c9651942d2"
-
-      def install
-        bin.install "capact"
+        bin.install "capact-darwin-amd64" => "capact-darwin-amd64"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/capact_0.5.1_Linux_x86_64.tar.gz"
-      sha256 "990bc8450afab2ed441579e3950074645b35232b3e405f78d35ec9c9651942d2"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/capact-linux-amd64"
+      sha256 "539dfd0696f91bee436314dd8192000904b86166133f8d8c483069dc6333f33a"
 
       def install
-        bin.install "capact"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.1/capact_0.5.1_Linux_arm64.tar.gz"
-      sha256 "990bc8450afab2ed441579e3950074645b35232b3e405f78d35ec9c9651942d2"
-
-      def install
-        bin.install "capact"
+        bin.install "capact-linux-amd64" => "capact-linux-amd64"
       end
     end
   end
