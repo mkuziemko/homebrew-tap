@@ -10,11 +10,11 @@ class Populator < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/populator_0.5.2_linux_arm64"
-      sha256 "ff2e4ac83b4fcc81ccd84e3ab7786d4c7e7114b0783596558841e13cf3a20a64"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/populator-linux-arm64"
+      sha256 "f86e47301d8be7f51534ad695cc0d91fc73cd7da8426e7b88c8cbe8d86901518"
 
       def install
-        bin.install "populator_0.5.2_linux_arm64" => "populator"
+        bin.install "populator-linux-arm64" => "populator"
       end
     end
   end
