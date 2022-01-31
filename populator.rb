@@ -6,38 +6,12 @@ class Populator < Formula
   desc ""
   homepage "https://github.com/mkuziemko/homebrew-tap"
   version "0.5.2"
-
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/populator_0.5.2_darwin_arm64"
-      sha256 "bffea3b5492884274f65f8ba129dd9eecc1bdeec7f460d19208897b999162123"
-
-      def install
-        bin.install "populator_0.5.2_darwin_arm64" => "populator"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/populator_0.5.2_darwin_amd64"
-      sha256 "bfd9fa245d7cdfbc17569b965a3cdfdb1ec03f3f08dc8f43ea4f9e22c854afe5"
-
-      def install
-        bin.install "populator_0.5.2_darwin_amd64" => "populator"
-      end
-    end
-  end
+  depends_on :linux
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/populator_0.5.2_linux_amd64"
-      sha256 "239f311961bdd450d0b147adc441b6ec3aff559a02e178b4c93004d346cfa931"
-
-      def install
-        bin.install "populator_0.5.2_linux_amd64" => "populator"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/populator_0.5.2_linux_arm64"
-      sha256 "1025d6fdb5890f82af9ed722d6166ee2717730eeed8289741429bb55b4842439"
+      sha256 "ff2e4ac83b4fcc81ccd84e3ab7786d4c7e7114b0783596558841e13cf3a20a64"
 
       def install
         bin.install "populator_0.5.2_linux_arm64" => "populator"
