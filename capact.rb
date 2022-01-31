@@ -10,11 +10,11 @@ class Capact < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/capact_0.5.2_linux_arm64"
-      sha256 "50ffd5b72f1a046c7e2c19e038a49bfb965d4e2ec692a93beca52787c00e0baf"
+      url "https://github.com/mkuziemko/capact/releases/download/v0.5.2/capact-linux-arm64"
+      sha256 "672f88cffb4ada706a3e70e53ebf13d8c896f07a39383fbaff00bf025fb8812d"
 
       def install
-        bin.install "capact_0.5.2_linux_arm64" => "capact"
+        bin.install "capact-linux-arm64" => "capact"
       end
     end
   end
